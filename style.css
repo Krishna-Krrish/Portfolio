@@ -6,7 +6,6 @@
 body{
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
-    background-color:black;
 }
 
 /* .container{
