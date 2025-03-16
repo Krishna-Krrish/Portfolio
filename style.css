@@ -1,0 +1,877 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* scrollbar-width: thin; Makes the scrollbar thin */
+    /* scrollbar-color: #0d6efd #f1f1f1; */
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+body {
+    background-color: #050505;
+    color: #D6FAFF;
+    scroll-behavior: smooth;
+    scrollbar-width: 5px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: "Goldman", serif; */
+   
+    font-family: "Spectral", serif !important;
+}
+
+p{
+    text-align: left !important;
+}
+
+button{
+  background: linear-gradient(to right, #DAFFD0, #75ECFF);
+  color: #050505;
+  transition: 0.4s ease;
+  padding: 5px 20px;
+  font-weight: 500;
+  border: none;
+  font-size: 16px;
+}
+
+button:hover{
+  background: linear-gradient(to left, #DAFFD0, #75ECFF);
+  box-shadow: 0 0px 30px rgba(255, 255, 255, 0.219);
+}
+
+
+h1{
+    color: #0EE5FF;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 25px !important;
+ }
+
+ h4{
+  font-size: 20px !important;
+ }
+
+ h5{
+  font-size: 18px !important;
+ }
+ 
+ p{
+  font-size: 18px !important;
+ }
+
+::-webkit-scrollbar {
+    width: 8px; /* Set the scrollbar width */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000; /* Scrollbar track color */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top,#75ECFF,#DAFFD0); /* Scrollbar thumb color */
+    border-radius: 4px; /* Rounded corners for the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:#0EE5FF; /* Thumb color on hover */
+  }
+  
+
+
+
+
+/* navbar  */
+
+.navbar-brand {
+    color:#63CDF5;
+    font-weight: bold;
+    font-size: 25px;
+   
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover{
+    color: #63CDF5 !important;
+}
+
+.navbar.navbar-expand-lg {
+    background-color: #000000da;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #DAFFD0 !important;
+    font-weight:300;
+    margin: 0 0px !important;
+    padding: 5px 0px !important;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #75ECFF !important;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to right,#DAFFD0,#75ECFF);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar-toggler{
+    background-color: #63CDF5;
+}
+
+.navbar-toggler:hover{
+    
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0px 30px rgba(255, 255, 255, 0.219);
+    /* border: #ffffff solid 1px; */
+}
+
+
+
+/* home banner section  */
+
+#banner {
+    display: flex; /* NEW: Enable Flexbox for centering */
+    flex-direction: column; /* NEW: Stack items vertically */
+    justify-content: center; /* NEW: Center items vertically */
+    align-items: center; /* NEW: Center items horizontally */
+    padding-top:0px; /* CHANGED: Removed top padding */
+    padding-bottom: 0; /* CHANGED: Removed bottom padding */
+    position: relative;
+    height: 100vh;
+    /* background: url(./close-up-keyboard-used-by-software-engineer-programming-home.jpg); */
+    background: url(./banner3.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    z-index: 2;
+    margin-top: 60px;
+}
+
+
+#banner p{
+    text-align: unset;
+}
+
+#banner .container{
+    z-index: 3;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.815); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensures it covers the background */
+}
+
+
+#about .banner-img img{
+    width: 300px;
+    text-align: center;
+    border-radius:10px;
+    border:solid #63CDF5;
+    border-width: 1px 1px 5px 5px;
+    /* background: linear-gradient(to left, #0000009d, #0000009d),url(./18220884_v1016-b-09.jpg); */
+    background: linear-gradient(to left,#0de7ff,#dbffd1);
+    /* box-shadow: 0 0px 30px rgba(255, 255, 255, 0.219); */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.144);
+    background-position: right;
+    background-size: cover;
+    /* margin-left: 100px; */
+}
+
+
+/* .greeting{
+    color: #9BFF81;
+} */
+
+/* Add typing effect animation */
+/* Styling the greeting */
+/* Center the text container */
+.greeting {
+  font-size: 2em;
+  font-family: 'Arial', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(0, 0, 0, 0); /* Simulate cursor */
+  width: 0;
+  display: block;
+  margin: 10px auto; /* Center horizontally */
+  text-align: center; /* Center align the text inside */
+  animation: typing 4s steps(20) infinite, blink 0.75s step-end infinite;
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+
+/* Cursor blink effect */
+@keyframes blink {
+  50% {
+    border-color:none;
+  }
+}
+
+
+
+#banner .title {
+    animation: colorChange 5s infinite alternate;
+  }
+
+@keyframes colorChange {
+    0% {
+      color:#E34F26;
+    }
+    20% {
+      color:#E34F26;
+    }
+    40% {
+      color: #63CDF5;
+    }
+    60% {
+      color:#F7DF1E;
+    }
+    80% {
+      color:#563D7C;
+    }
+    100% {
+      color:#21759B;
+    }
+  }
+
+
+#banner .btn{
+    /* background-color:#63CDF5; */
+    background: linear-gradient(to right, #DAFFD0, #75ECFF);
+    color: #050505;
+    transition: 0.4s ease;
+    padding: 5px 20px;
+    font-weight: 500;
+}
+
+#banner .btn:hover{
+    /* background-color: #03A7EE; */
+    background: linear-gradient(to left, #DAFFD0, #75ECFF);
+    box-shadow: 0 0px 30px rgba(255, 255, 255, 0.219);
+}
+
+
+#banner .social {
+    font-size: 150%;
+    color:#75ECFF;
+    transition: 0.4s ease;
+    border-radius: 100%;
+}
+
+#banner .social:hover{
+    color:#DAFFD0;
+    text-shadow: 0 0px 20px #D6FAFF;
+    transform: scale(1.5);
+}
+
+
+
+/* About section  */
+
+#about{
+    padding: 50px 0;
+    padding-bottom: 0;
+}
+
+#about h4{
+    color: #0EE5FF;
+}
+
+/* Skills  */
+
+#skills img{
+    width: 100px;
+    height: 110px;
+}
+
+#skills .card{
+    transition: 0.2s ease;
+    background-color: #DAFFD0 !important;
+}
+
+#skills .card:hover{
+    /* transform: translateX(-10px); */
+    transform: scale(0.9);
+}
+
+.skills-loop-container {
+  width: 100%; /* Full-width container */
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-loop {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  animation: scroll 15s linear infinite; /* Smooth scrolling animation */
+}
+
+.skills-loop .card {
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  width: 120px; /* Fixed card width */
+  height: auto;
+  text-align: center;
+}
+
+.skill-images{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center; 
+  gap: 30px;
+  margin-top: 20px;   
+}
+
+.skill-images img{
+  width: 10%;
+  transition: transform 0.3s;
+  display: inline-block;
+  background-color: #dbffd1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.skill-images img:hover {
+  /* transform: scale(1.20); */
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start at the beginning */
+  }
+  100% {
+    transform: translateX(-100%); /* Move left by 100% of its width */
+  }
+}
+
+.skills-loop-container:hover .skills-loop {
+  animation-play-state: paused;
+}
+
+/* Experience */
+
+#experience{
+    margin-top: 50px;
+    padding:50px 0 ;
+    /* background-color:#000000c5; */
+    background: url(/Web.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 0 05px 50px rgba(20, 20, 20, 0.911);
+    position: relative;
+    z-index: 3;
+    display: block;
+}
+
+.exp-img{
+    border-radius: 10px;
+    box-shadow: -10px 0 30px #7474743b;
+}
+
+#experience .container{
+    z-index: 3;
+    position: relative;
+}
+
+#experience .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.747); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensures it covers the background */
+}
+
+
+/* projects  */
+
+#projects{
+    padding: 50px 0 ;
+}
+
+  
+.project-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+/*   
+  .project-box:hover {
+    transform: scale(1.05);
+  }
+   */
+  .project-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project-box:hover{
+    box-shadow: 0 05px 50px #74747442;
+  }
+
+  .project-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: move;
+  }
+
+ 
+  .project-box:hover .overlay {
+    opacity: 2;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  #real-time-projects{
+    padding: 100px 0;
+  }
+
+  #real-time-projects img{
+     border-radius: 5px;
+  }
+
+  #my-works{
+    padding:100px 0 ;
+  }
+
+
+  /* contact  */
+
+  #contact{
+    padding: 50px 0;
+  }
+
+  #contact .btn{
+    background: linear-gradient(to right, #DAFFD0, #75ECFF);
+    color: #050505;
+    transition: 0.4s ease;
+    padding: 5px 20px;
+    font-weight: 500;
+}
+
+#contact .btn:hover{
+    /* background-color: #03A7EE; */
+    background: linear-gradient(to left, #DAFFD0, #75ECFF);
+    box-shadow: 0 0px 30px rgba(255, 255, 255, 0.219);
+}
+
+.form-control:focus{
+    outline: 2px solid #0EE5FF !important;
+    border: #0EE5FF !important;
+    box-shadow:none !important;
+}
+
+.contact-no{
+  color: #D6FAFF;
+  text-align: center;
+}
+
+  /* footer  */
+
+  #footer{
+    background-color:black;
+    color:#0EE5FF;
+    font-weight: 600;
+    padding: 10px 0;
+    margin-top: 0px;
+  }
+
+  #footer a{
+    text-decoration: underline;
+    color:#0EE5FF;
+    font-weight: 600;
+  }
+
+  /* certification */
+
+  #certification{
+    padding: 50px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.911)), url('./1222228_9518.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .carousel-inner .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-item img {
+    height: 250px; /* Adjust based on certificate size */
+    /* object-fit: contain; */
+    margin: auto;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px; */
+  }
+
+  .carousel-inner .col {
+    flex: 1;
+    max-width: 50.333%; /* Ensures 3 items per slide */
+  }
+
+.carousel-control-prev, 
+.carousel-control-next {
+  width: auto; /* Adjust button width */
+  height: auto; /* Adjust button height */
+  background: none !important;
+}
+
+.carousel-control-prev {
+  left: -28px; /* Adjust how far outside the left button is */
+}
+
+.carousel-control-next {
+  right: -28px; /* Adjust how far outside the right button is */
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  background-size: 15px; /* Adjust the size of the arrow icon */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  transform: scale(1.2); /* Add hover effect */
+  box-shadow: none !important;
+}
+
+/* Styling for carousel and overlay */
+.certificate-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-item img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  /* border-radius: 5px; */
+}
+
+/* Zoom effect on hover */
+.certificate-item:hover img {
+  transform: scale(1.1);
+  /* border-radius: 25px; */
+}
+
+/* Overlay styling */
+.carousel .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* border-radius: 15px; */
+}
+
+.certificate-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Text styling in overlay */
+.overlay p {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+  
+  
+
+@media screen and (max-width:1440px){
+  p{
+    text-align: justify;
+    font-size: 22px;
+}
+
+
+li{
+  font-size: 22px;
+}
+
+h1{
+font-size: 45px;
+}
+
+
+h4{
+ font-size: 30px;
+}
+
+h5{
+  font-size: 25px;
+}
+}
+
+
+
+  
+  
+  @media screen and (max-width:1024px) {
+
+    .greeting {
+      font-size: 2em;
+      font-family: 'Arial', sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid rgba(0, 0, 0, 0); /* Simulate cursor */
+      width: 0;
+      display: block;
+      margin: 10px auto; /* Center horizontally */
+      text-align: center; /* Center align the text inside */
+      animation: typing 4s steps(20) infinite, blink 0.75s step-end infinite;
+      text-align: center; /* Ensure text is centered */
+    }
+    
+    /* Typing animation */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 45%;
+      }
+    }
+    
+    /* Cursor blink effect */
+    @keyframes blink {
+      50% {
+        border-color:none;
+      }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .navbar-nav {
+        display: flex;
+        gap: 15px !important;
+        margin-top: 25px !important;
+    }
+
+    .greeting {
+      font-size: 2em;
+      font-family: 'Arial', sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid rgba(0, 0, 0, 0); /* Simulate cursor */
+      width: 0;
+      display: block;
+      margin: 10px auto; /* Center horizontally */
+      text-align: center; /* Center align the text inside */
+      animation: typing 4s steps(20) infinite, blink 0.75s step-end infinite;
+      text-align: center; /* Ensure text is centered */
+    }
+    
+    /* Typing animation */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 50%;
+      }
+    }
+    
+    /* Cursor blink effect */
+    @keyframes blink {
+      50% {
+        border-color:none;
+      }
+    }
+
+    .carousel-item img {
+      height: 150px;
+    }
+    .carousel .overlay{
+      height: 150px;
+    }
+
+    .skill-images{
+      flex-wrap: wrap;
+  }
+
+  .skill-images img{
+      width: 15%;
+  }
+
+
+}
+
+
+
+@media screen and (max-width:425px) {
+  .greeting{
+    font-size: 1.5em;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  }
+
+  .carousel-item img {
+    height: 80px;
+  }
+
+  .carousel .overlay{
+    height: 80px;
+  }
+
+  .carousel-control-prev {
+    left: -30px; /* Adjust how far outside the left button is */
+  }
+  
+  .carousel-control-next {
+    right: -30px; /* Adjust how far outside the right button is */
+  }
+
+  .skill-images{
+    gap: 10px;
+    margin-top: 20px;   
+}
+
+.skill-images img{
+    width: 18%;
+}
+
+.exp-detail{
+  font-size: 13px;
+}
+
+
+#banner {
+  padding-top: 340px; /* CHANGED: Removed top padding */
+  padding-bottom: 220px; /* CHANGED: Removed bottom padding */
+  position: relative;
+  height: 500px;
+  /* background: url(./close-up-keyboard-used-by-software-engineer-programming-home.jpg); */
+  background: url(./banner3.jpg);
+  /* background-position:top; */
+  background-position: 0% 16%; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  z-index: 2;
+}
+
+
+}
+
+
+@media screen and (max-width:375px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  }
+  .carousel-item img {
+    height: 70px;
+  }
+  .carousel .overlay{
+    height: 70px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 95%;
+    }
+  }
+
+  .carousel-item img {
+    height: 65px;
+  }
+
+  .carousel .overlay{
+    height: 65px;
+  }
+
+}
