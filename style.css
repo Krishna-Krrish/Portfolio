@@ -821,7 +821,7 @@ h5{
 
 
 #banner {
-  padding-top: 180px; /* CHANGED: Removed top padding */
+  padding-top: 120px; /* CHANGED: Removed top padding */
   padding-bottom: 20px; /* CHANGED: Removed bottom padding */
   position: relative;
   height: 100vh;
